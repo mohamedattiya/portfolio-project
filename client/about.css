@@ -1,0 +1,486 @@
+
+/* =========================================
+   MOHAMED ATYA — ABOUT PAGE
+   Dark Navy / Modern Blue Design
+========================================= */
+
+/* ---------- Base ---------- */
+
+:root {
+  --about-bg: #080f1e;
+  --about-surface: #0e1a2e;
+  --about-surface-hover: #132440;
+  --about-blue: #60a5fa;
+  --about-blue-strong: #3b82f6;
+  --about-white: #f1f5f9;
+  --about-muted: #a5b4ca;
+  --about-border: rgba(96, 165, 250, 0.16);
+}
+
+body {
+  background: var(--about-bg);
+  color: var(--about-white);
+}
+
+.about-page {
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 85px 0 100px;
+}
+
+/* ---------- Hero ---------- */
+
+.about-hero {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto 85px;
+  animation: aboutFadeUp 0.7s ease both;
+}
+
+.about-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--about-blue);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.about-label::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background: var(--about-blue);
+}
+
+.about-hero h1 {
+  max-width: 800px;
+  font-size: clamp(40px, 6vw, 70px);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -2.5px;
+  margin: 0 0 28px;
+}
+
+.about-hero h1 span {
+  display: block;
+  color: var(--about-blue);
+}
+
+.about-hero p {
+  max-width: 740px;
+  color: var(--about-muted);
+  font-size: 16px;
+  line-height: 1.95;
+  margin: 0 0 16px;
+}
+
+/* ---------- Sections ---------- */
+
+.about-section {
+  margin-top: 80px;
+  animation: aboutFadeUp 0.7s ease both;
+}
+
+.about-section h2 {
+  font-size: clamp(26px, 4vw, 36px);
+  line-height: 1.3;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+  margin: 0 0 20px;
+}
+
+.about-section > p {
+  max-width: 800px;
+  color: var(--about-muted);
+  font-size: 15px;
+  line-height: 1.95;
+  margin: 0 0 16px;
+}
+
+/* ---------- Cards Grid ---------- */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.about-card {
+  position: relative;
+  min-width: 0;
+  padding: 28px;
+  overflow: hidden;
+  background: var(--about-surface);
+  border: 1px solid var(--about-border);
+  border-radius: 15px;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.about-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55px;
+  height: 2px;
+  background: var(--about-blue);
+  opacity: 0.75;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  background: var(--about-surface-hover);
+  border-color: rgba(96, 165, 250, 0.45);
+}
+
+.about-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  border-radius: 12px;
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--about-blue);
+  font-size: 22px;
+}
+
+.about-card h3 {
+  color: var(--about-white);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+.about-card p {
+  color: var(--about-muted);
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+/* ---------- Technical Tags ---------- */
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.about-tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid var(--about-border);
+  border-radius: 8px;
+  color: #c7dcfb;
+  font-size: 13px;
+  font-weight: 500;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.about-tags span:hover {
+  background: rgba(59, 130, 246, 0.16);
+  border-color: rgba(96, 165, 250, 0.4);
+  color: #fff;
+}
+
+/* ---------- Call to Action ---------- */
+
+.about-cta {
+  position: relative;
+  margin-top: 90px;
+  padding: 52px 36px;
+  text-align: center;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(37, 99, 235, 0.2),
+      transparent 70%
+    ),
+    var(--about-surface);
+  border: 1px solid var(--about-border);
+  border-radius: 20px;
+}
+
+.about-cta h2 {
+  color: var(--about-white);
+  font-size: clamp(27px, 4vw, 38px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 0 0 16px;
+}
+
+.about-cta p {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  color: var(--about-muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.about-cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 5px;
+  padding: 13px 22px;
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  border-radius: 9px;
+  background: var(--about-blue-strong);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.about-cta a:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.2);
+}
+
+.about-cta a:focus-visible {
+  outline: 2px solid var(--about-blue);
+  outline-offset: 4px;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  padding: 28px 24px;
+  border-top: 1px solid var(--about-border);
+  text-align: center;
+}
+
+footer p {
+  color: var(--about-muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ---------- Navigation Active State ---------- */
+
+header nav a[aria-current="page"] {
+  color: var(--about-blue);
+}
+
+/* ---------- Animation ---------- */
+
+@keyframes aboutFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 800px) {
+  .about-page {
+    padding-top: 65px;
+  }
+
+  .about-hero {
+    margin-bottom: 60px;
+  }
+
+  .about-section {
+    margin-top: 60px;
+  }
+
+  .about-cta {
+    margin-top: 65px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+  .about-page {
+    width: calc(100% - 32px);
+    padding: 48px 0 65px;
+  }
+
+  .about-hero {
+    margin-bottom: 48px;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(36px, 10vw, 48px);
+    letter-spacing: -1.5px;
+    line-height: 1.16;
+  }
+
+  .about-hero p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .about-section {
+    margin-top: 48px;
+  }
+
+  .about-section h2 {
+    font-size: 27px;
+  }
+
+  .about-section > p {
+    font-size: 14px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 24px;
+  }
+
+  .about-card {
+    padding: 23px;
+  }
+
+  .about-card h3 {
+    font-size: 18px;
+  }
+
+  .about-card p {
+    font-size: 13px;
+  }
+
+  .about-tags {
+    gap: 8px;
+  }
+
+  .about-tags span {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+
+  .about-cta {
+    margin-top: 55px;
+    padding: 32px 20px;
+  }
+
+  .about-cta h2 {
+    font-size: 27px;
+  }
+
+  .about-cta p {
+    font-size: 14px;
+  }
+
+  .about-cta a {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5px 0;
+  }
+}
+
+/* ---------- Accessibility ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-hero,
+  .about-section {
+    animation: none;
+  }
+
+  .about-card,
+  .about-tags span,
+  .about-cta a {
+    transition: none;
+  }
+
+  .about-card:hover,
+  .about-cta a:hover {
+    transform: none;
+  }
+}
+
+/* =========================================
+   SHARED HOME-PAGE BUTTON STYLE
+   About page
+========================================= */
+
+/* Match the Home page's gradient buttons */
+.about-cta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 5px;
+    padding: 13px 21px;
+    color: #07111f;
+    background: linear-gradient(110deg, #38bdf8, #818cf8);
+    border: 1px solid #38bdf8;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.about-cta a:hover {
+    color: #07111f;
+    background: linear-gradient(110deg, #7dd3fc, #a5b4fc);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px #38bdf830;
+}
+
+/* Consistent navigation link transitions */
+header nav a {
+    transition: color 0.25s ease;
+}
+
+header nav a:hover {
+    color: #38bdf8;
+}
+
+header nav a[aria-current="page"] {
+    color: #38bdf8;
+}
+
+.about-cta a:focus-visible,
+header nav a:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .about-cta a {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 5px 0;
+    }
+}
